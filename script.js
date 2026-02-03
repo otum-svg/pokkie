@@ -50,6 +50,21 @@ function handleNo() {
     yesBtn.style.transform = `scale(${yesSize})`;
     yesBtn.style.boxShadow = `0 0 ${clickCount * 10}px rgba(255, 77, 109, 0.5)`;
 
+    if (clickCount >= 5) {
+        yesBtn.style.position = 'fixed';
+        yesBtn.style.top = '0';
+        yesBtn.style.left = '0';
+        yesBtn.style.width = '100vw';
+        yesBtn.style.height = '100vh';
+        yesBtn.style.zIndex = '9999';
+        yesBtn.style.borderRadius = '0';
+        yesBtn.style.fontSize = '50px';
+        yesBtn.innerText = 'YES!';
+        // Hide the no button
+        const noBtn = document.getElementById('noBtn');
+        noBtn.style.display = 'none';
+    }
+
     const noBtn = document.getElementById('noBtn');
     noBtn.innerText = phrases[Math.min(clickCount, phrases.length - 1)];
     const newFontSize = Math.max(14, 18 - clickCount);

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Message for You ✨</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container" id="card">
+        <div id="ask-content">
+            <img src="cat-cute.gif" class="anime-gif" id="display-gif">
+            <h1 id="main-text">I've been practicing my confession... <br> Will you be my Valentine? 🌸</h1>
+            <p id="sub-text">Every "No" makes my heart grow (literally)!</p>
+            
+            <div class="btn-container">
+                <button style="z-index: 4;" id="yesBtn" onclick="celebrate()">YES! ✨</button>
+                <button style="z-index: 3;" id="noBtn" onclick="handleNo()">No</button>
+            </div>
+        </div>
+
+        <div id="success-content" class="hidden">
+            <img src="love-you.gif" class="anime-gif">
+            <h1 id="success-title">KNEW IT! 💓😊💓</h1>
+            <div id="wishes-container"></div>
+        </div>
+    </div>
+        <script src="script.js"></script>
+</body>
+</html>
